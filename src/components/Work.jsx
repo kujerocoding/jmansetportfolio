@@ -51,7 +51,7 @@ function Work() {
   return (
     <motion.section
       id="work"
-      className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto h-screen flex flex-col justify-center items-center gap-30"
+      className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto mt-20 lg:mt-0 lg:h-screen flex gap-10 flex-col justify-center items-center 2xl:gap-30"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -79,7 +79,7 @@ function Work() {
       <div className="w-full flex flex-col items-center 2xl:flex-row gap-10">
         <div className="flex-1">
           <motion.div
-            className="mb-4"
+            className="mb-4 text-center lg:text-left"
             initial={{ y: 10, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.7 }}

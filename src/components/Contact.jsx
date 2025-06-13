@@ -31,7 +31,7 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="w-11/12 md:w-10/12 mx-auto h-screen flex flex-col justify-center items-center gap-30"
+      className="w-11/12 md:w-10/12 mx-auto mt-20 lg:h-screen flex gap-10 flex-col justify-center items-center lg:gap-30"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -93,17 +93,16 @@ export default function Contact() {
         ></motion.textarea>
 
         <motion.div
-          className=" bg-action font-bold px-4 py-2 cursor-pointer rounded-md shadow"
+          className=" bg-action font-bold px-4 py-2 mb-10 lg:mb-0 cursor-pointer rounded-md shadow"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          // transition={{ duration: 0.3, delay: 1.1 }}
           whileHover={{
             backgroundColor: "#225e52",
           }}
           whileTap={{ scale: 0.95 }}
           transition={{
-            y: { duration: 0.3, delay: 1.1, ease: "easeOut" },
-            opacity: { duration: 0.3, delay: 1.1, ease: "easeOut" },
+            y: { duration: 0.3, delay: 0.9, ease: "easeOut" },
+            opacity: { duration: 0.3, delay: 0.9, ease: "easeOut" },
             backgroundColor: { duration: 0.3, ease: "easeOut" },
           }}
         >

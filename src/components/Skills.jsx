@@ -7,7 +7,7 @@ function Skills() {
   return (
     <motion.section
       id="skills"
-      className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto h-screen flex flex-col justify-center items-center gap-30"
+      className="w-11/12 md:w-10/12 lg:w-6/12 mx-auto mt-20 lg:mt-0 lg:h-screen flex gap-10 flex-col justify-center items-center lg:gap-30"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -32,9 +32,9 @@ function Skills() {
       </div>
 
       <div className="flex flex-col xl:flex-row gap-20 xl:items-center">
-        <div className="flex flex-col items-center lg:items-start gap-10">
+        <div className="flex flex-col items-center xl:items-start gap-10">
           <motion.p
-            className="max-w-xl"
+            className="max-w-xl text-center xl:text-left"
             initial={{ x: -20, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.7 }}

@@ -18,13 +18,13 @@ const FEATURES = [
 function Hero() {
   return (
     <motion.section
-      id="top"
-      className="w-11/12 md:w-10/12 lg:w-8/12 mx-auto h-screen flex flex-col gap-30 justify-center items-center "
+      id="hero"
+      className="w-11/12 mx-auto md:w-10/12 lg:w-8/12 lg:h-screen flex gap-10 flex-col lg:gap-30 justify-center items-center "
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full flex flex-col items-center gap-10 md:flex-row  p-4 lg:max-w-3xl">
+      <div className="w-full mt-20 flex flex-col items-center gap-10 lg:mt-0 lg:flex-row  p-4 lg:max-w-3xl">
         <motion.img
           src={profile}
           alt="profile-picture"
@@ -33,7 +33,7 @@ function Hero() {
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
         />
-        <div className="flex flex-1 flex-col gap-4 items-center md:items-start">
+        <div className="flex flex-1 flex-col gap-4 items-center lg:items-start">
           <motion.h2
             className="text-3xl font-bold"
             initial={{ y: -20, opacity: 0 }}
@@ -53,7 +53,7 @@ function Hero() {
             solutions.
           </motion.p>
           <motion.div
-            className="text-right md:self-end bg-action font-bold px-4 py-2 cursor-pointer rounded-md shadow"
+            className="text-right lg:self-end bg-action font-bold px-4 py-2 cursor-pointer rounded-md shadow"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             whileHover={{

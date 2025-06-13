@@ -8,7 +8,7 @@ import menu from "../assets/menu-white.png"
 import Logo from "./Logo"
 
 const NAVLIST = [
-  { navName: "Home", navLink: "top" },
+  { navName: "Home", navLink: "hero" },
   { navName: "Work", navLink: "work" },
   { navName: "Skills", navLink: "skills" },
   { navName: "Contact", navLink: "contact" },
@@ -61,25 +61,23 @@ function Navbar() {
         >
           <img src={menu} alt="menu icon" className="w-6" />
         </button>
-
-        {/* Mobile menu */}
-        <ul
-          className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 right-0 w-64 h-screen bg-mobile-menu z-50 transition-transform duration-500 transform ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <img src={close} alt="close icon" className="w-5 cursor-pointer" />
-          </div>
-          {NAVLIST.map((list) => (
-            <li key={list.navLink}>
-              <a href={`#${list.navLink}`} onClick={closeMenu}>
-                {list.navName}
-              </a>
-            </li>
-          ))}
-        </ul>
       </motion.nav>
+      <ul
+        className={`md:hidden flex flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 right-0 w-64 h-screen bg-mobile-menu z-50 transition-transform duration-500 transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="absolute right-6 top-6" onClick={closeMenu}>
+          <img src={close} alt="close icon" className="w-5 cursor-pointer" />
+        </div>
+        {NAVLIST.map((list) => (
+          <li key={list.navLink}>
+            <a href={`#${list.navLink}`} onClick={closeMenu}>
+              {list.navName}
+            </a>
+          </li>
+        ))}
+      </ul>
       <div
         className={`${
           hidden && "hidden"
